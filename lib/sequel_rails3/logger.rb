@@ -27,7 +27,6 @@ module SequelRails3
       return unless logger && logger.debug?
 
       name = '(%.1fms)' % [duration*1000]
-      sql  = sql.squeeze(' ')
 
       if odd?
         name = helper.send(:color, name, ActiveSupport::LogSubscriber::CYAN, true)
